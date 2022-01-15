@@ -20,28 +20,16 @@ const Header = () => {
               <Link href="/" fontSize="3xl" fontWeight="bold" fontFamily="Lobster" p={3}>
               Spacestagram
               </Link>
-              <Flex>
-                <motion.div whileHover={{scale: 1.1}} >
-                    <IconButton
-                        aria-label="icon"
-                        icon={ <FaRegHeart/> }
-                        fontSize="28px"
-                        variant="subtle"
-                        onClick={() => router.push('/likes')}
-                        mr={2}
-                    />
-                </motion.div>
-                <motion.div whileHover={{scale: 1.1}}>
-                    <IconButton
-                        aria-label="icon"
-                        icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                        fontSize="28px"
-                        variant="subtle"
-                        onClick={toggleColorMode}
-                        mr={2}
-                    />
-                </motion.div>
-              </Flex>
+              <motion.div whileHover={{scale: 1.1}}>
+                <IconButton
+                    aria-label="icon"
+                    icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                    fontSize="28px"
+                    variant="subtle"
+                    onClick={toggleColorMode}
+                    mr={2}
+                />
+            </motion.div>
           </Flex>
     )
 }
