@@ -2,7 +2,7 @@ import useSWR from "swr";
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
-import Error from "../components/error";
+import Error from "../components/Error";
 import Head from "next/head";
 import Footer from "../components/Footer";
 
