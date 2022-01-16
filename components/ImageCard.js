@@ -59,7 +59,7 @@ const ImageCard = ({image}) => {
                                     <Input id="modal-link" fontSize="sm" fontWeight="bold" px={2} value={window.location.href.includes(image.date) ? window.location.href : window.location.href + "image/" + image.date} isReadOnly />
                                     <InputRightElement width='4.5rem'>
                                         <motion.div whileHover={{scale: 1.1}}>
-                                            <Button h='1.75rem' size='sm' onClick={() => {
+                                            <Button zIndex={1} h='1.75rem' size='sm' onClick={() => {
                                                 const copyText = document.getElementById("modal-link");
                                                 copyText.select();
                                                 navigator.clipboard.writeText(copyText.value);
