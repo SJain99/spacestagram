@@ -43,10 +43,10 @@ const ImageCard = ({image}) => {
                 <Image src={image.thumbnail_url ? image.thumbnail_url : image.url} width={600} height={600} alt={image.title} />
                 <Flex pl={3} py={1}>
                     <motion.div whileHover={{scale: 1.1}}>
-                        <IconButton variant="unstyled" icon={localStorage.getItem(image.title) ? <FaHeart fontSize="28px" color="#E31C79" onClick={() => (localStorage.removeItem(image.title), setLiked(false))} /> : <FaRegHeart fontSize="28px" onClick={() => (localStorage.setItem(image.title, image.date), setLiked(true))} />} />
+                        <IconButton aria-label="Like Image" variant="unstyled" icon={localStorage.getItem(image.title) ? <FaHeart fontSize="28px" color="#E31C79" onClick={() => (localStorage.removeItem(image.title), setLiked(false))} /> : <FaRegHeart fontSize="28px" onClick={() => (localStorage.setItem(image.title, image.date), setLiked(true))} />} />
                     </motion.div>
                     <motion.div whileHover={{scale: 1.1}}>
-                        <IconButton variant="unstyled" icon={<FiSend fontSize="28px" onClick={onOpen} />} />
+                        <IconButton aria-label="Share Image" variant="unstyled" icon={<FiSend fontSize="28px" onClick={onOpen} />} />
                     </motion.div>
                     <Modal isOpen={isOpen} onClose={onClose}>
                         <ModalOverlay />

@@ -14,6 +14,7 @@ const NotFound = () => {
                 <title>404 | Spacestagram</title>
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="description" content="Spacestagram: Image-sharing from the final frontier." />
             </Head>
             <Header />
             <Flex maxWidth="1000px" justifyContent="center" alignItems="center" mx="auto" mt="40vh" px={4} flexDirection="column">

@@ -20,6 +20,7 @@ export default function Home() {
         <title>Error | Spacestagram</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Spacestagram: Image-sharing from the final frontier." />
       </Head>
       <Error />
       <Footer />
@@ -31,6 +32,7 @@ export default function Home() {
         <title>Loading... | Spacestagram</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Spacestagram: Image-sharing from the final frontier." />
       </Head>
       <Header />
       <Loading />
@@ -43,6 +45,7 @@ export default function Home() {
         <title>Spacestagram</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Spacestagram: Image-sharing from the final frontier." />
       </Head>
       <Layout images={data} />
     </>
