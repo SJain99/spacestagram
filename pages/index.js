@@ -7,7 +7,7 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 
 const fetcher = async () => {
-  const res = await fetch("https://api.nasa.gov/planetary/apod?api_key=" + process.env.NEXT_PUBLIC_NASA_API_KEY + "&start_date=2021-12-01&thumbs=true");
+  const res = await fetch("https://api.nasa.gov/planetary/apod?api_key=" + process.env.NEXT_PUBLIC_NASA_API_KEY + "&start_date=2022-01-01&thumbs=true");
   const data = await res.json();
   return data.reverse()
 }
