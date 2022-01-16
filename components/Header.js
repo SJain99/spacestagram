@@ -19,7 +19,7 @@ const Header = () => {
               </Link>
               <motion.div whileHover={{scale: 1.1}}>
                 <IconButton
-                    aria-label="icon"
+                    aria-label="Toggle Dark Mode"
                     icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                     fontSize="28px"
                     variant="subtle"
