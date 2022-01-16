@@ -56,7 +56,7 @@ const ImageCard = ({image}) => {
                             <ModalBody>
                                 <Text pb={4}>Use the link below if you wish to share this post 🚀</Text>
                                 <InputGroup pb={2}>
-                                    <Input id="modal-link" fontSize="sm" fontWeight="bold" px={2} value={window.location.href.includes(image.date) ? window.location.href : window.location.href + image.date} isReadOnly />
+                                    <Input id="modal-link" fontSize="sm" fontWeight="bold" px={2} value={window.location.href.includes(image.date) ? window.location.href : window.location.href + "image/" + image.date} isReadOnly />
                                     <InputRightElement width='4.5rem'>
                                         <motion.div whileHover={{scale: 1.1}}>
                                             <Button h='1.75rem' size='sm' onClick={() => {

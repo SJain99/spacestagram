@@ -1,12 +1,9 @@
-import { Flex, Link, IconButton, useColorMode, Box } from '@chakra-ui/react'
+import { Flex, Link, IconButton, useColorMode } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { FaRegHeart } from 'react-icons/fa'
-import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
-    const router = useRouter();
     return (
         <Flex 
             justifyContent="space-between" 

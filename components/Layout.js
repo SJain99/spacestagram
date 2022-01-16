@@ -1,6 +1,7 @@
 import Header from "./Header";
 import ImageCard from "./ImageCard"
 import { Flex, Box } from "@chakra-ui/react";
+import Footer from "./Footer";
 
 const Layout = ({images}) => {
     return (
@@ -16,6 +17,7 @@ const Layout = ({images}) => {
                 <ImageCard image={images} />
             </Box>}
             </Flex>
+            <Footer />
         </Box>
     )
 }

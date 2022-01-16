@@ -1,19 +1,23 @@
 import useSWR from "swr";
-import Layout from "../components/Layout";
-import Loading from "../components/Loading";
-import Header from "../components/Header";
-import Error from "../components/error";
+import Layout from "../../components/Layout";
+import { useRouter } from "next/router";
+import Loading from "../../components/Loading";
+import Header from "../../components/Header";
+import Error from "../../components/error";
 import Head from "next/head";
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer";
 
-const fetcher = async () => {
-  const res = await fetch("https://api.nasa.gov/planetary/apod?api_key=" + process.env.NEXT_PUBLIC_NASA_API_KEY + "&start_date=2021-12-01&thumbs=true");
+const fetcher = async (date) => {
+  const url = "https://api.nasa.gov/planetary/apod?api_key=" + process.env.NEXT_PUBLIC_NASA_API_KEY + "&date=" + date + "&thumbs=true";
+  const res = await fetch(url);
   const data = await res.json();
-  return data.reverse()
+  return data
 }
 
-export default function Home() {
-  const { data, error } = useSWR("images", fetcher)
+export default function APOD() {
+  const router = useRouter();
+  const { date } = router.query;
+  const { data, error } = useSWR(date, fetcher)
   if(error) return (
     <>
       <Head>
@@ -40,7 +44,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Spacestagram</title>
+        <title>{date} APOD | Spacestagram</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
