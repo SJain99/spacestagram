@@ -4,7 +4,6 @@ const Loading = () => {
     const { colorMode } = useColorMode();
     return (
         <Box>
-            <Header />
             <Flex flexDirection="column" maxWidth="600px" width="100%" justify="center" mx="auto" pt={20} pb={4}>
                 <Box pb={2} px={2}>
                     <Flex borderRadius="lg" boxShadow="xl" backgroundColor={colorMode === "light" ? "white" : "gray.800"}>
